@@ -1,1 +1,162 @@
+// ------------------------------Variables------------------------------
+$aspect1to1:                         100%;   // 1/1
+$aspect4to3:                         75%;    // 3/4
+$aspect3to2:                         66.66%; // 2/3
+$aspect8to5:                         62.5%;  // 5/8
+$aspect16to9:                        56.25%; // 9/16
+$aspect2to1:                         50%;    // 1/2
 
+$nav-state-indicators-color:       #e2e6ea;
+$nav-state-active-indicator-color: #f8f9fa; 
+
+$prev-icon:						               '❮';
+$next-icon:						               '❯';
+
+// ------------------------------Styles------------------------------
+.custom-page-container {
+
+  .slider {
+    position: relative;
+    padding-top: $aspect16to9;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .slider1to1 {padding-top: $aspect1to1;}
+  .slider4to3 {padding-top: $aspect4to3;}
+  .slider3to2 {padding-top: $aspect3to2;}
+  .slider8to5 {padding-top: $aspect8to5;}
+  .slider2to1 {padding-top: $aspect2to1;}
+  
+  // state panel
+  .slider-state-panel {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    user-select: none;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+     
+    .indicator {
+      display: inline-block;
+      width: 1.5em;
+      height: 0.75em;
+      cursor: pointer;
+      background-color: $nav-state-indicators-color;
+      border-radius: 0.5em;
+    }
+
+    .indicator.active {
+      width: 2em;
+      height: 1em;
+      background-color: $nav-state-active-indicator-color;
+    }
+    
+    .indicator:hover {
+      color: #ffffff;
+      background-color: $nav-state-active-indicator-color;
+      outline: none;
+    }
+  }
+
+  // Slide
+  .slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+ 
+ 
+    input[type="radio"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .image-container {
+      height: 100%;
+      position: relative;
+      top: 0;
+      transition: ease-in-out 0.5s;
+      opacity: 0;
+    }
+    
+    input:checked + .image-container {
+      opacity: 1;
+    }
+  }
+
+  // nav buttons
+  .nav-button {
+    color: #ffffff;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0 2.5rem;
+    background: rgb(150, 150, 150);
+    z-index: 1;
+    opacity: 0.2;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+  }
+ 
+  .nav-button:hover {
+    opacity: 0.5;
+    background: rgb(90, 90, 90);
+  }
+
+  .prev-button {
+    left: 0;
+  }
+
+  .next-button {
+    right: 0;
+  }
+
+  .nav-button::after {
+    position: absolute;
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: 900;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+    text-align: center;
+  }
+  
+  .prev-button::after {
+    content: $prev-icon;
+    left: 0;
+    transition: ease-in-out 0.5s;
+  }
+
+  .next-button::after {
+    content: $next-icon;
+    right: 0;
+  }
+}
+
+// End of slider styles. Only pictures
+  #slide1 {
+    background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/headshot-of-giraffe-sabi-sands-game-reserve-royalty-free-image-1573571198.jpg') center no-repeat;
+    background-size: contain;
+  }
+  
+  #slide2 {
+    background: url('https://img.etimg.com/thumb/msid-68721417,width-1200,height-900,imgsize-1016106,overlay-etpanache/photo.jpg') center no-repeat;
+    background-size: cover;
+  }
+  
+  #slide3 {
+    background: url('https://www.extremeiceland.is/media/8747/skogafoss-famous-waterfall-iceland-1.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=1055&amp;height=700&amp;rnd=131849585150000000') center no-repeat;
+    background-size: cover;
+  }
