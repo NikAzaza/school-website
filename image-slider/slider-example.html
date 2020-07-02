@@ -1,0 +1,45 @@
+<!-- Должно раcпологаться в начале любой кастомной страницы (нужно для инкапсуляции стилей кастомной страницы) -->
+<div class="custom-page-container">
+
+    <!-- любой контент -->
+      
+    <form class="slider" onchange="javascript:(function f(e){var t=e.getElementsByClassName('indicator active')[0],a=e.getElementsByClassName('prev-button')[0],n=e.getElementsByClassName('next-button')[0];return console.log(e.getElementsByClassName('next-button')),function(){var s=Array.from(e.getElementsByTagName('input')),l=Array.from(e.getElementsByClassName('indicator')),i=s.findIndex(e=>e.checked);t.classList.remove('active'),(t=l[i]).classList.add('active');var m=0===i?s[s.length-1].id:s[i-1].id,r=i===s.length-1?s[0].id:s[i+1].id;a.htmlFor=m,n.htmlFor=r}}(this))(this)">
+      <div class="slider-state-panel">
+        <label for="Уникальный ID для radiobutton 1" class="indicator active"></label>
+        <label for="Уникальный ID для radiobutton 2" class="indicator"></label>
+        <label for="Уникальный ID для radiobutton 3" class="indicator"></label>
+      </div>
+      <label class="nav-button prev-button" for="Уникальный ID для предыдущей radiobutton"></label>
+      <label class="nav-button next-button" for="Уникальный ID для следующей radiobutton"></label>
+      <div class="slide">
+        <input type="radio" id="Уникальный ID для radiobutton 1" checked name="slider">
+        <div class="image-container" id="Уникальный ID для слайда 1"></div>
+      </div>
+      <div class="slide">
+        <input type="radio" id="Уникальный ID для radiobutton 2" name="slider">
+        <div class="image-container" id="Уникальный ID для слайда 2"></div>
+      </div>
+      <div class="slide">
+        <input type="radio" id="Уникальный ID для radiobutton 3" name="slider">
+        <div class="image-container" id="Уникальный ID для слайда 3"></div>
+      </div>
+    </form>
+
+    <!-- Ещё контент, если нужно -->
+    
+  </div>
+  <!-- Конец кастомной страницы. Теперь можно указать картинки для слайдов -->
+  <style>
+    #Уникальный ID для слайда 1 {
+      background: url('URL-адрес картинки') center no-repeat;
+      background-size: способ подгонки изображения внутри слайда (обычно contain или cover, но можно указать и в процентах/пикселях);
+    }
+    #Уникальный ID для слайда 2 {
+      background: url('URL-адрес картинки') center no-repeat;
+      background-size: способ подгонки изображения внутри слайда (обычно contain или cover, но можно указать и в процентах/пикселях);
+    }
+    #Уникальный ID для слайда 3 {
+      background: url('URL-адрес картинки') center no-repeat;
+      background-size: способ подгонки изображения внутри слайда (обычно contain или cover, но можно указать и в процентах/пикселях);
+    }
+  </style>
