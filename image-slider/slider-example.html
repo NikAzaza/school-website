@@ -3,7 +3,7 @@
 
     <!-- любой контент -->
       
-    <form class="slider" onchange="javascript:(function f(e){var t=e.getElementsByClassName('indicator active')[0],a=e.getElementsByClassName('prev-button')[0],n=e.getElementsByClassName('next-button')[0];return console.log(e.getElementsByClassName('next-button')),function(){var s=Array.from(e.getElementsByTagName('input')),l=Array.from(e.getElementsByClassName('indicator')),i=s.findIndex(e=>e.checked);t.classList.remove('active'),(t=l[i]).classList.add('active');var m=0===i?s[s.length-1].id:s[i-1].id,r=i===s.length-1?s[0].id:s[i+1].id;a.htmlFor=m,n.htmlFor=r}}(this))(this)">
+   <form class="slider" onchange='javascript:(function f(e){var t=e.getElementsByClassName("indicator active")[0],a=e.getElementsByClassName("prev-button")[0],n=e.getElementsByClassName("next-button")[0];return function(){var s=Array.from(e.getElementsByTagName("input")),i=Array.from(e.getElementsByClassName("indicator")),r=s.findIndex(e=>e.checked);t.classList.remove("active"),(t=i[r]).classList.add("active");var l=0===r?s[s.length-1].id:s[r-1].id,m=r===s.length-1?s[0].id:s[r+1].id;a.htmlFor=l,n.htmlFor=m}}(this))(this)'>
       <div class="slider-state-panel">
         <label for="Уникальный ID для radiobutton 1" class="indicator active"></label>
         <label for="Уникальный ID для radiobutton 2" class="indicator"></label>
