@@ -2,7 +2,6 @@ function handleEvent(form) {
             var previous = form.getElementsByClassName('indicator active')[0];
             var prev = form.getElementsByClassName('prev-button')[0];
             var next = form.getElementsByClassName('next-button')[0];
-            console.log(form.getElementsByClassName('next-button'));
       
             return function onChange() {
               var radiobuttons = Array.from(form.getElementsByTagName('input'));
