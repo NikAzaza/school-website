@@ -1,0 +1,25 @@
+<!-- Для инкапсуляции стилей кастомной страницы. Разместить в начале страницы-->
+ <div class="custom-page-container">
+ 
+ <!--  Сразу  нужно разместить и контейнер для полноразмерной картинки-->
+    <div id="images-full-size-container">
+      <div class="image-wrapper">
+        <span class="close-button" onclick="javascript:(function e(){document.getElementById('images-full-size-container').classList.toggle('opened')}())">x</span>
+        <img>
+      </div>
+    </div>
+  <!-- Конец контейнера -->
+    
+  <!--  Любой контент-->
+  
+  <figure class="large-image-preview">
+    <div class="large-image-preview-wrapper" onclick="javascript:(function q(e){var t=document.getElementById('images-full-size-container'),a=t.clientWidth;t.classList.toggle('opened');var l=e.getElementsByTagName('img')[0],i=l.naturalWidth,g=l.naturalHeight,n=t.getElementsByTagName('img')[0],s=g/i;n.style.width=i>=a?'100%':`${i}px`,n.style.height=i>=a?`${a*s}px`:`${g}px`,n.src=l.src,n.alt=l.alt}(this))">
+      <div class="large-image-preview-curtain"></div>
+      <img src="ссылка на изображение" alt="текст, если изображение недоступно">
+    </div>
+    <!-- Необязательная подпись -->
+    <figcaption class="large-image-preview-description">Описание</figcaption>
+  </figure>
+  
+   <!--  Еще любое количество контента -->
+</div>
