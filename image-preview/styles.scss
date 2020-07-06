@@ -1,0 +1,126 @@
+// ===================Variables========================
+
+$modal-visible: 1;
+$modal-hidden: 0;
+
+$close-btn-color: #dc3545;
+$close-btn-active-color: #c82333;
+
+$curtain-animation: ease-in-out 0.3s;
+$symbol-zoom: '\26B2';
+
+// ====================Styles==========================
+.custom-page-container {
+  // container and inner image styles
+  #images-full-size-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: $modal-hidden;
+    transition: ease-in 0.3s;
+    background: #fff;
+    overflow-y: scroll;
+
+    &.opened {
+      opacity: $modal-visible;
+      z-index: 2;
+    }
+
+    .image-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+
+      .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        line-height: 2rem;
+        text-transform: uppercase;
+        background-color: $close-btn-color;
+        color: #fff;
+        border: 2px solid $close-btn-color;
+        border-radius: 0.25rem;
+        cursor: pointer;
+      }
+
+      .close-button:active, .close-button:hover {
+        background-color: $close-btn-active-color;
+      }
+    }
+  }
+
+  // preview image styles
+  .large-image-preview {
+      &-wrapper {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        user-select: none;
+      }
+
+      &-wrapper::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        top: -100%;
+        transition: $curtain-animation;
+      }
+
+      &-curtain {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: $curtain-animation;
+      }
+
+      &-curtain::before, &-curtain::after {
+        position: relative;
+        display: inline-block;
+        color: #ffffff;
+      }
+
+      &-curtain::before {
+        content: $symbol-zoom;
+        transform: rotate(-45deg);
+        font-size: 2.5rem;
+      }
+
+      &-curtain::after {
+        content: 'Нажмите, чтобы увеличить';
+        font-size: 1rem;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      
+      &-description {
+        text-align: center;
+        font-style: italic;
+      }
+  }
+
+  .large-image-preview:hover .large-image-preview-wrapper::before {
+    top: -4px;
+  }
+
+  .large-image-preview:hover .large-image-preview-curtain {
+    top: 50%;
+  }
+}
