@@ -38,10 +38,10 @@ $next-icon:						               '❯';
     text-align: center;
     z-index: 1;
     user-select: none;
-    opacity: 0.6;
+    opacity: 0.6!important;
 
     &:hover {
-      opacity: 1;
+      opacity: 1!important;
     }
      
     .indicator {
@@ -82,7 +82,7 @@ $next-icon:						               '❯';
  
     input[type="radio"] {
       position: absolute;
-      visibility: hidden;
+      visibility: hidden!important;
     }
 
     .image-container, .image-container-thin {
