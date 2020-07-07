@@ -15,7 +15,7 @@
 ```
 <div class="slide">
   <input type="radio" id="Уникальный ID для radiobutton 3" checked name="slider">
-  <div class="image-container" id="Уникальный ID для слайда 3"></div>
+  <img class="image-container" src="ссылка на картинку" alt="Текст">
 </div>
 ```
 ## 3) Придумываем ***УНИКАЛЬНЫЕ*** имена вместо строк "Уникальный ID для ...". 
@@ -25,7 +25,6 @@
 Подставляем в форму.
 ID для тега```<input type="radio" id="Уникальный ID для radiobutton 2" name="slider">``` подставляем и в тег  ```<label for="Уникальный ID для radiobutton 2" class="indicator"></label>```.
 Это нужно для корректного переключения слайдов.
-Уникальный  ID для слайда ```<div class="image-container" id="Уникальный ID для слайда 2"></div> ``` нигде не дублируем!
 
 ## 4) указываем ID для перемещения на следующий и предыдущий слайды.
 ```
@@ -38,11 +37,8 @@ ID для тега```<input type="radio" id="Уникальный ID для radi
 
 Далее берем уникальный ID второго слайда из тега ```<input type="radio" id="Уникальный ID для radiobutton 2" name="slider"> ``` и копируем в тег ```<label class="nav-button next-button" for="Уникальный ID для следующей radiobutton"></label> ```.
 
-## 5) добавляем стили
-В конце страницы (после ```</div>```) вставляем тег ```<link href="URL ссылка на файл стилей" rel="stylesheet">```. Ссылку можно указать <a href="https://github.com/NikAzaza/school-website/blob/master/image-slider/slider-styles.min.css" target="_blank">на файл в репозитории Github</a>
-, либо можно загрузить файл в файловый архив на сайте и указать ссылку на него. Даже если на странице несколько слайдеров, стили нужно подключить всего 1 раз.
+## 5) добавляем картинки и стили
+В тегах ```<img class="image-container" src="ссылка на картинку" alt="Текст">``` прописываем ссылку на изображени. Указываем текст, который будет отображен вместо картинки, если картинка по какой-либо причине станет недоступна.
 
-Внутри тега ```<style></style>``` прописываем картинки для каждого слайда. Копируем уникальный ID для из слайда ```<div class="image-container" id="Уникальный ID для слайда 3"></div>```
-и прописываем адреса картинок и заполнение. <a href="https://github.com/NikAzaza/school-website/blob/master/image-slider/slider-example.html" target="_blank">(Как в примере)</a>.
-
-**Картинку для каждого слайда во всех слайдерах нужно прописать отдельно!** например, 2 слайдера по 5 фотографий =  нужно прописать 10 ID внутри ```<style></style>```  
+В начале страницы (перед ```<div class="custom-page-container">```) вставляем тег ```<link href="URL ссылка на файл стилей" rel="stylesheet">```. Ссылку можно указать на файл из репозитория Github. Для этого нужно скопировать ссылку на <a href="https://github.com/NikAzaza/school-website/blob/master/image-slider/slider-styles.min.css" target="_blank"> минифицированный файл стилей </a> и воспользоваться сервисом <a href="https://combinatronics.com/" target="_blank">https://combinatronics.com/</a>. 
+Либо можно загрузить <a href="https://github.com/NikAzaza/school-website/blob/master/image-slider/slider-styles.min.css" target="_blank"> минифицированный файл стилей </a> в файловое хранилище на сервер сайта и воспользоваться полученной ссылкой
