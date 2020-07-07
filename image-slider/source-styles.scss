@@ -74,22 +74,34 @@ $next-icon:						               '❯';
     left: 0;
     right: 0;
     background-color: transparent;
- 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
  
     input[type="radio"] {
       position: absolute;
       visibility: hidden;
     }
 
-    .image-container {
-      height: 100%;
-      position: relative;
-      top: 0;
+    .image-container, .image-container-thin {
       transition: ease-in-out 0.5s;
       opacity: 0;
     }
+
+    .image-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .image-container-thin {
+      height: 100%;
+      width: auto;
+    }
     
-    input:checked + .image-container {
+    input:checked + .image-container,
+    input:checked + .image-container-thin {
       opacity: 1;
     }
   }
@@ -144,19 +156,3 @@ $next-icon:						               '❯';
     right: 0;
   }
 }
-
-// End of slider styles. Only pictures
-  #slide1 {
-    background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/headshot-of-giraffe-sabi-sands-game-reserve-royalty-free-image-1573571198.jpg') center no-repeat;
-    background-size: contain;
-  }
-  
-  #slide2 {
-    background: url('https://img.etimg.com/thumb/msid-68721417,width-1200,height-900,imgsize-1016106,overlay-etpanache/photo.jpg') center no-repeat;
-    background-size: cover;
-  }
-  
-  #slide3 {
-    background: url('https://www.extremeiceland.is/media/8747/skogafoss-famous-waterfall-iceland-1.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=1055&amp;height=700&amp;rnd=131849585150000000') center no-repeat;
-    background-size: cover;
-  }
