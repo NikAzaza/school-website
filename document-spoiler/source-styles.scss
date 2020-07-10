@@ -1,0 +1,75 @@
+.ast_box .custom-page-container {
+    section.spoiler-section {
+        margin-top: 30px;
+
+        input {
+            visibility: hidden!important;
+            position: relative;
+        }
+
+        input::before,
+        input::after {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+            font-weight: 700;
+            width: 130px;
+            cursor: pointer;
+            user-select: none;
+            color: #343a40;
+            border: 1px solid #343a40;
+            padding: .375rem .75rem;
+            border-radius: .25rem;
+        }
+
+        input::before {
+            content: 'Скрыть документ';
+            visibility: visible;
+        }
+
+        input::after {
+            content: "Показать документ";
+            visibility: hidden;
+            width: 150px;
+            background-color: #343a40;
+            color: #ffffff
+        }
+
+        input:checked::before {
+            visibility: hidden;
+        }
+
+        input:checked::after {
+            visibility: visible;
+        }
+
+        input:checked+.frame-wrapper {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        a .link-description {
+            font-size: 14px;
+        }
+
+        .frame-wrapper {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .frame-wrapper iframe {
+            width: 700px;
+            height: 400px;
+        }
+    }
+}
