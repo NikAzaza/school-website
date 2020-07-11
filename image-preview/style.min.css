@@ -1,1 +1,95 @@
-@charset "UTF-8";.custom-page-container .ast_box #images-full-size-container{position:fixed;top:0;bottom:0;left:0;right:0;z-index:-1;opacity:0!important;transition:ease-in .3s;background:#fff;overflow-y:scroll}.custom-page-container .ast_box #images-full-size-container.opened{opacity:1!important;z-index:2}.custom-page-container .ast_box #images-full-size-container .image-wrapper{position:relative;display:flex;flex-direction:row;justify-content:center;align-items:center;min-height:100%}.custom-page-container .ast_box #images-full-size-container .image-wrapper .close-button{position:absolute;top:0;right:0;display:inline-block;width:2rem;height:2rem;text-align:center;line-height:2rem;text-transform:uppercase;background-color:#dc3545;color:#fff;border:2px solid #dc3545;border-radius:.25rem;cursor:pointer}.custom-page-container .ast_box #images-full-size-container .image-wrapper .close-button:active,.custom-page-container .ast_box #images-full-size-container .image-wrapper .close-button:hover{background-color:#c82333}.custom-page-container .ast_box .large-image-preview-wrapper{position:relative;cursor:pointer;overflow:hidden;user-select:none}.custom-page-container .ast_box .large-image-preview-wrapper::before{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,.75);top:-100%;transition:ease-in-out .3s}.custom-page-container .ast_box .large-image-preview-curtain{position:absolute;top:150%;left:50%;transform:translate(-50%,-50%);text-align:center;transition:ease-in-out .3s}.custom-page-container .ast_box .large-image-preview-curtain::after,.custom-page-container .ast_box .large-image-preview-curtain::before{position:relative;display:inline-block;color:#fff}.custom-page-container .ast_box .large-image-preview-curtain::before{content:"⚲";transform:rotate(-45deg);font-size:2.5rem}.custom-page-container .ast_box .large-image-preview-curtain::after{content:"Нажмите, чтобы увеличить";font-size:1rem}.custom-page-container .ast_box .large-image-preview img{width:100%;height:auto}.custom-page-container .ast_box .large-image-preview-description{text-align:center;font-style:italic}.custom-page-container .ast_box .large-image-preview:hover .large-image-preview-wrapper::before{top:-4px}.custom-page-container .ast_box .large-image-preview:hover .large-image-preview-curtain{top:50%}
+@charset "UTF-8";
+.ast_box .custom-page-container #images-full-size-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0 !important;
+  transition: ease-in 0.3s;
+  background: #fff;
+  overflow-y: scroll;
+}
+.ast_box .custom-page-container #images-full-size-container.opened {
+  opacity: 1 !important;
+  z-index: 2;
+}
+.ast_box .custom-page-container #images-full-size-container .image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+.ast_box .custom-page-container #images-full-size-container .image-wrapper .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  text-transform: uppercase;
+  background-color: #dc3545;
+  color: #fff;
+  border: 2px solid #dc3545;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.ast_box .custom-page-container #images-full-size-container .image-wrapper .close-button:active, .ast_box .custom-page-container #images-full-size-container .image-wrapper .close-button:hover {
+  background-color: #c82333;
+}
+.ast_box .custom-page-container .large-image-preview-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+}
+.ast_box .custom-page-container .large-image-preview-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  top: -100%;
+  transition: ease-in-out 0.3s;
+}
+.ast_box .custom-page-container .large-image-preview-curtain {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: ease-in-out 0.3s;
+}
+.ast_box .custom-page-container .large-image-preview-curtain::before, .ast_box .custom-page-container .large-image-preview-curtain::after {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+}
+.ast_box .custom-page-container .large-image-preview-curtain::before {
+  content: "⚲";
+  transform: rotate(-45deg);
+  font-size: 2.5rem;
+}
+.ast_box .custom-page-container .large-image-preview-curtain::after {
+  content: "Нажмите, чтобы увеличить";
+  font-size: 1rem;
+}
+.ast_box .custom-page-container .large-image-preview img {
+  width: 100%;
+  height: auto;
+}
+.ast_box .custom-page-container .large-image-preview-description {
+  text-align: center;
+  font-style: italic;
+}
+.ast_box .custom-page-container .large-image-preview:hover .large-image-preview-wrapper::before {
+  top: -4px;
+}
+.ast_box .custom-page-container .large-image-preview:hover .large-image-preview-curtain {
+  top: 50%;
+}
