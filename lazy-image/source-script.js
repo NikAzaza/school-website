@@ -1,11 +1,12 @@
-function lazy(element, src) {
+function lazy(element) {
     var image = new Image();
-    image.src = src;
+    image.src = element.dataset.url.src;
     image.alt = element.alt;
-    image.style.cssText = element.style.cssText;
+    if (element.style.cssText) image.style.cssText = element.style.cssText;
 
     var replacer = function() {
         var collection = element.classList;
+
         collection.remove('lazy-image-background');
 
         for (var i = 0; i < collection.length; i++)
