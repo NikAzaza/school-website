@@ -1,6 +1,6 @@
 function lazy(element) {
     var image = new Image();
-    image.src = element.dataset.url.src;
+    image.src = element.dataset.url;
     image.alt = element.alt;
     if (element.style.cssText) image.style.cssText = element.style.cssText;
 
