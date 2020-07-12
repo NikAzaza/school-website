@@ -2,12 +2,12 @@
  <div class="custom-page-container">
  
  <!--  Сразу  нужно разместить и контейнер для полноразмерной картинки-->
-    <div id="images-full-size-container">
-      <div class="image-wrapper">
-        <span class="close-button" onclick="javascript:(function e(){document.getElementById('images-full-size-container').classList.toggle('opened')}())">x</span>
-        <img>
-      </div>
-    </div>
+   <div id="images-full-size-container" onclick="javascript:(function l(e,t){t.path.includes(e.getElementsByTagName('img')[0])||document.getElementById('images-full-size-container').classList.toggle('opened')}(this, event))">
+       <div class="image-wrapper">
+           <span class="close-button">x</span>
+           <img>
+       </div>
+   </div>
   <!-- Конец контейнера -->
     
   <!--  Любой контент-->
