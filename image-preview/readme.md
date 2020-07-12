@@ -1,6 +1,6 @@
 ## 1) Вставляем содержимое файла <a href="https://github.com/NikAzaza/school-website/blob/master/image-preview/example.html" target="_blank">example.html</a> на редактируемую страницу.
 Строка 
-```
+```html
 <div class="custom-page-container">
 ```
 должна быть первой строкой на создаваемой странице, т.к. нужна для ограничения влияния стилей нашей страницы на стили сайта. Закрывающийся тег ```</div>``` должен быть в коце страницы
@@ -9,16 +9,16 @@
  
  
 ## 2) внутри контейнера можно размещать любой контент. Превью для изображений состоит из тегов 
-``` 
-<div id="images-full-size-container">
-  <div class="image-wrapper">
-    <span class="close-button" onclick="javascript:(function e(){document.getElementById('images-full-size-container').classList.toggle('opened')}())">x</span>
-    <img>
-  </div>
+```html 
+<div id="images-full-size-container" onclick="javascript:(function l(e,t){t.path.includes(e.getElementsByTagName('img')[0])||document.getElementById('images-full-size-container').classList.toggle('opened')}(this, event))">
+    <div class="image-wrapper">
+        <span class="close-button">x</span>
+        <img>
+    </div>
 </div>
 ``` 
     и 
-```
+```html
 <figure class="large-image-preview">
   <div class="large-image-preview-wrapper" onclick="javascript:(function q(e){var t=document.getElementById('images-full-size-container'),a=t.clientWidth;t.classList.toggle('opened');var l=e.getElementsByTagName('img')[0],i=l.naturalWidth,g=l.naturalHeight,n=t.getElementsByTagName('img')[0],s=g/i;n.style.width=i>=a?'100%':`${i}px`,n.style.height=i>=a?`${a*s}px`:`${g}px`,n.src=l.src,n.alt=l.alt}(this))">
     <div class="large-image-preview-curtain"></div>
