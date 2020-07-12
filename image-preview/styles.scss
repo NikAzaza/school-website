@@ -26,7 +26,7 @@ $symbol-zoom: '\26B2';
 
     &.opened {
       opacity: $modal-visible;
-      z-index: 2;
+      z-index: 5;
     }
 
     .image-wrapper {
