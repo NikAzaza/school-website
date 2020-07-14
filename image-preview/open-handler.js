@@ -1,7 +1,7 @@
 function openImage(wrapper) {
   var element = document.getElementById('images-full-size-container');
   var width = element.clientWidth;
-  element.classList.toggle('opened');
+  element.classList.add('opened');
 
   var sourceImg =  wrapper.getElementsByTagName('img')[0];          
   var realWidth = sourceImg.naturalWidth;
